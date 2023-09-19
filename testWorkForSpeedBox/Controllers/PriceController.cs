@@ -13,8 +13,6 @@ namespace testWorkForSpeedBox.Controllers
     [ApiController]
     public class PriceController : ControllerBase
     {
-        //06c915aa-7511-4b24-acfa-c99638405217 - Питер
-        //0c5b2444-70a0-4932-980c-b4dc0d3f02b5 - Москва
         [HttpPost]
         [Route("check")]
         public async Task<ActionResult<float>> Check(PriceCheck item)
