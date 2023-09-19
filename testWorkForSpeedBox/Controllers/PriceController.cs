@@ -61,7 +61,7 @@ namespace testWorkForSpeedBox.Controllers
                 var responseString = await response.Content.ReadAsStringAsync();
                 var json = JsonSerializer.Deserialize<GetTariffDTO>(responseString);
                 if (json.tariff_codes.Count() == 0)
-                    return BadRequest("Для такого груза не найдено подходящего тариффа");
+                    return BadRequest("Для такого груза не найдено подходящего тарифа");
 
                 return json.tariff_codes.Min(a => a.delivery_sum);
             }
